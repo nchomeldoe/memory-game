@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Mate+SC&display=swap');
+
+$font-main: "Mate SC", serif;
+$colour-red: #FE5834;
+$colour-white: #FFFFFF;
+
+$font-size: 16px;
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $font-main;
+    background-color: $colour-white;
+    color: $colour-red;
+    font-size: 14px;
+}
+
+@media screen and (min-width: 768px) {
+    * {
+        font-size: 20px;
+    }
+}
+
+@media screen and (min-width: 991px) {
+    * {
+        font-size: 22px;
+        }
+}

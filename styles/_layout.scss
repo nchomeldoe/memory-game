@@ -1,0 +1,52 @@
+.header {
+    width: 100vw;
+    height: 15vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: $colour-red;
+    color: $colour-white;
+
+    * {
+        background-color: $colour-red;
+        color: $colour-white;
+    }
+}
+
+.heading {
+    font-size: 2em;
+}
+
+.subheading {
+    font-size: 1.5em;
+}
+
+.main {
+ padding: 20px;
+}
+
+.information {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 20vh;
+}
+
+.game {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+@media screen and (min-width: 768px) {
+    .game {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media screen and (min-width: 991px) {
+    .game {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
