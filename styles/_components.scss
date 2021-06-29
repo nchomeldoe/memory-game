@@ -1,41 +1,16 @@
 .tile {
     height: 30vh;
-    background-color:transparent;
+    background-color: $colour-black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin: 1px;
     perspective: 1000px;
 }
 
-.tile-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    transition: transform 0.8s;
-    transform-style: preserve-3d;
-  }
-
-  // .tile:hover .tile-inner {
-  //   transform: rotateY(180deg);
-  // }
-
-  .tile-front, .tile-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-  }
-
-  .tile-front {
-    background-color: $colour-tiles;
-  }
-
-  .tile-back {
-    transform: rotateY(180deg);
-  }
-
   .svg-image {
-      width: 80%;
-      height: 80%;
-      padding: 10px;
+      width: 75%;
+      height: 75%;
+      padding: 12px;
+      background-color: transparent;
   }
