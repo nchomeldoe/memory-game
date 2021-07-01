@@ -26,12 +26,12 @@
   justify-content: center;
   align-items: center;
   margin: 1px;
-  perspective: 1000px;
   transition: 0.75s;
 }
-.tile:hover {
+.tile.open {
   transform: rotateY(180deg);
   background-color: #127CA0;
+  pointer-events: none;
 }
 
 .svg-image {

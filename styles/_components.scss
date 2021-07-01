@@ -5,10 +5,10 @@
     justify-content: center;
     align-items: center;
     margin: 1px;
-    perspective: 1000px;
+    // perspective: 1000px;
     transition: .75s;
 
-    &:hover {
+    &.open {
         transform: rotateY(180deg);
         background-color: $colour-tiles;
     }
