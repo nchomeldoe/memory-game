@@ -11,10 +11,12 @@
     &.open {
         transform: rotateY(180deg);
         background-color: $colour-tiles;
+        pointer-events: none;
     }
 
     &.matched {
         background-color: $colour-matched;
+        pointer-events: none;
     }
 
 }
