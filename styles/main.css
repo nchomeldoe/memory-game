@@ -31,7 +31,9 @@
 .tile.open {
   transform: rotateY(180deg);
   background-color: #127CA0;
-  pointer-events: none;
+}
+.tile.matched {
+  background-color: #DAF7A6;
 }
 
 .svg-image {

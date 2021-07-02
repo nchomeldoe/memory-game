@@ -13,6 +13,10 @@
         background-color: $colour-tiles;
     }
 
+    &.matched {
+        background-color: $colour-matched;
+    }
+
 }
 
 .svg-image {
