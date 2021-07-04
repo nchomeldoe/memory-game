@@ -5,7 +5,6 @@
     justify-content: center;
     align-items: center;
     margin: 1px;
-    // perspective: 1000px;
     transition: .75s;
 
     &.open {
@@ -28,3 +27,55 @@
       background-color: transparent;
 }
 
+button {
+    border: 1px solid $colour-red;
+    text-align: center;
+    padding: 8px;
+    border-radius: 12px;
+    display: inline-block;
+
+    &:hover {
+        background-color: $colour-tiles;
+    }
+}
+
+.notification {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        visibility: visible;
+        background-color: transparent;
+}
+
+.popup {
+	margin: 70px auto;
+	padding: 20px;
+	background: $colour-white;
+	border-radius: 5px;
+	width: 75%;
+    height: 50%;
+	position: relative;
+	color: $colour-red;
+
+    .close{
+        text-align: right;
+        a {
+            text-decoration: none;
+            &:hover {
+                color: $colour-tiles;
+            }
+        }
+    }
+
+
+        h1 {
+            font-size: 1.5em;
+            padding-bottom: 20px;
+        }
+
+        
+
+
+}

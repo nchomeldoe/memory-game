@@ -16,16 +16,7 @@
     </header>
 
     <main class="main">
-        <div class="information">
-            <div class="difficulty-selection">
-                <label for="difficulty">Difficulty:</label>
-                <select id="difficulty" name="difficulty">
-                    <option value="easy">Easy</option>
-                    <option value="medium">Medium</option>
-                    <option value="hard">Hard</option>
-                </select>
-            </div>
-            <p class="goes-para">Remaining goes: <span class="goes-number">20</span></p>
+        <div class="refresh">
             <button class="refresh">New game</button>
         </div>
 
@@ -69,14 +60,12 @@
         </div>
         
         <div class="notification">
-            <div id="popup1" class="overlay">
-                <a class="close" href=# >×</a>
-                <h2>Congratulations! You won!</h2>
-                <button id="play-again">Play again</button>
-            </div>
-            <div id="popup2" class="overlay">
-                <a class="close" href=# >×</a>
-                <h2>You ran out of goes. Better luck next time!</h2>
+            <div class="popup">
+                <div class="close">
+                    <a href=#>x</a>
+                </div>
+                <h1>Game over!</h2>
+                <p></p>
                 <button id="play-again">Play again</button>
             </div>
         </div>

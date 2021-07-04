@@ -1,7 +1,7 @@
 //Query selectors
 
 const tiles = document.querySelectorAll(".tile");
-const flippedTiles = document.querySelectorAll(".open");
+
 
 //Set counters
 
@@ -61,15 +61,18 @@ function startGame() {
             console.log(openTiles.length)
 
             //     when two tiles are open, increment goesTaken and check for match
+
             if(openTiles.length === 2){
                 goesTaken += 1;
                 console.log(goesTaken);
+
                 if(openTiles[0] !== openTiles[1]){
                     tilesUnmatched();
                 }
                 else{
                     tilesMatched();
                 }
+                
             }
         
             //  if open tiles len is 2 then:
@@ -82,6 +85,7 @@ function startGame() {
                 // if matched pairs == 6 then throw you win panel
             console.log(openTiles);
         })
+
     });
 
 // event listener on reset button
@@ -94,23 +98,37 @@ function sleep(ms) {
 
   //if tiles are not matched, flip them back and clear openTiles
  async function tilesUnmatched() {
+    tiles.forEach((tile) => {
+        tile.style.pointerEvents = "none"
+        });
     await sleep(1500);
      tiles.forEach((tile) => {
          if(tile.classList.contains("open")) {
             tile.classList.remove("open");
-         }
+         };
+         tile.style.pointerEvents = "";
          })
         openTiles = []
      }
 
   //if tiles are matched, keep them open and change to green and increment matchedPairs
   async function tilesMatched() {
+    tiles.forEach((tile) => {
+        tile.style.pointerEvents = "none"
+        });
     await sleep(1500);
      tiles.forEach((tile) => {
          if(tile.classList.contains("open")) {
             tile.classList.remove("open");
             tile.classList.add("matched");
-         }
+         };
+         tile.style.pointerEvents = "";
          })
-        openTiles = []
+        openTiles = [];
+        matchedPairs += 1;
+        console.log(matchedPairs);
+        // if matchedPairs is 6 then end game with pop-up
+        if(matchedPairs === 2) {
+            alert('MATCHED!!!')
+        }
      }
