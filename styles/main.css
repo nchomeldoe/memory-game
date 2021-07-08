@@ -4,8 +4,6 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Mate SC", serif;
-  background-color: #FFFFFF;
-  color: #FE5834;
   font-size: 14px;
 }
 
@@ -50,6 +48,9 @@ button {
   padding: 8px;
   border-radius: 12px;
   display: inline-block;
+  background-color: #FFFFFF;
+  color: #FE5834;
+  margin-bottom: 10px;
 }
 button:hover {
   background-color: #127CA0;
@@ -79,10 +80,6 @@ button:hover {
   background-color: #FE5834;
   color: #FFFFFF;
 }
-.header * {
-  background-color: #FE5834;
-  color: #FFFFFF;
-}
 .header .subheading {
   text-align: center;
 }
@@ -97,6 +94,7 @@ button:hover {
 
 .main {
   padding: 20px;
+  background-color: #FFFFFF;
 }
 
 .refresh {

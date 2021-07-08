@@ -32,6 +32,9 @@ button {
     padding: 8px;
     border-radius: 12px;
     display: inline-block;
+    background-color: $colour-white;
+    color: $colour-red;
+    margin-bottom: 10px;
 
     &:hover {
         background-color: $colour-tiles;

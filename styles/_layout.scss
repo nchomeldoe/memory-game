@@ -9,10 +9,10 @@
     background-color: $colour-red;
     color: $colour-white;
 
-    * {
-        background-color: $colour-red;
-        color: $colour-white;
-    }
+    // * {
+    //     background-color: $colour-red;
+    //     color: $colour-white;
+    // }
 
     .subheading {
         text-align: center;
@@ -29,6 +29,7 @@
 
 .main {
  padding: 20px;
+ background-color: $colour-white;
 }
 
 .refresh {
