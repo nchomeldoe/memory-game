@@ -110,6 +110,7 @@ button:hover {
   height: 80vh;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  padding-bottom: 10px;
 }
 
 @media screen and (min-width: 768px) {
