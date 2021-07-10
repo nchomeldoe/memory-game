@@ -1,7 +1,7 @@
 //Query selectors
 
 const tiles = document.querySelectorAll(".tile");
-const newGame = document.querySelector(".refresh");
+const newGame = document.querySelector(".refresh-button");
 const body = document.querySelector("body");
 const notification = document.querySelector(".notification");
 const playAgain = document.querySelector(".play-again");
