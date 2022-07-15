@@ -1,7 +1,13 @@
+@use "./variables" as *;
 
-.header {
+.outer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .header {
     width: 100vw;
-    height: 20vh;
+    height: 15vh;
     padding: 10px;
     display: flex;
     flex-direction: column;
@@ -10,89 +16,70 @@
     background-color: $colour-red;
     color: $colour-white;
 
-    .subheading {
-        text-align: center;
+    &__heading {
+      font-size: 1.2rem;
+      @media screen and (min-width: 768px) {
+        font-size: 1.7rem;
+      }
+
+      @media screen and (min-width: 1024px) {
+        font-size: 2.2rem;
+      }
     }
-}
 
-.heading {
-    font-size: 2em;
-}
+    &__subheading {
+      text-align: center;
+      font-size: 1rem;
+      @media screen and (min-width: 768px) {
+        font-size: 1.5rem;
+      }
 
-.subheading {
-    font-size: 1.5em;
-}
+      @media screen and (min-width: 1024px) {
+        font-size: 2rem;
+      }
+    }
+  }
 
-.main {
- padding: 20px;
- background-color: $colour-white;
-}
+  .main {
+    min-width: 98vw;
+    padding: 1.25rem;
+    background-color: $colour-white;
+    @media screen and (min-width: 1024px) {
+      min-width: 60rem;
+      max-width: 100rem;
+    }
 
-.refresh {
-    padding-bottom: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 5vh;
-}
+    .reset {
+      padding-bottom: 0.625rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 5vh;
+    }
 
-.game {
-    width: 100%;
-    height: 80vh;
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-    grid-template-rows: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
-    padding-bottom: 10px;
-}
-
-@media screen and (min-width: 768px) {
-    .game {
+    .board {
+      height: 75vh;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      grid-template-rows:
+        minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr)
+        minmax(0, 1fr) minmax(0, 1fr);
+      padding-bottom: 0.625rem;
+      @media screen and (min-width: 768px) {
         grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
-        grid-template-rows: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
-    }
-}
+        grid-template-rows: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(
+            0,
+            1fr
+          );
+      }
 
-@media screen and (min-width: 991px) {
-    .game {
-        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+      @media screen and (min-width: 1024px) {
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(
+            0,
+            1fr
+          );
         grid-template-rows: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+      }
     }
-}
-
-.notification {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    visibility: hidden;
-    background-color: transparent;
-}
-
-.close{
-    text-align: right;
-        a {
-            text-decoration: none;
-            &:hover {
-                color: $colour-tiles;
-            }
-        }
-}
-
-.info {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        margin-bottom: 30px;
-
-     h1 {
-            font-size: 1.5em;
-            padding-bottom: 20px;
-        }
-
-}
-
-.play-again {
-    position: absolute;
-    bottom: 10px;
+  }
 }

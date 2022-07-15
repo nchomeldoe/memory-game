@@ -1,56 +1,102 @@
-.tile {
-    background-color: $colour-black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 1px;
-    transition: .75s;
+@use "./variables" as *;
 
-    &.open {
-        transform: rotateY(180deg);
-        background-color: $colour-tiles;
-        pointer-events: none;
-    }
-
-    &.matched {
-        background-color: $colour-matched;
-        pointer-events: none;
-    }
-
+.reset__button {
+  @include button;
 }
 
-.svg-image {
-      width: 75%;
-      height: 75%;
-      padding: 12px;
-      background-color: transparent;
+.board__tile {
+  background-color: $colour-black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.063rem;
+  transition: 0.75s;
+
+  &.open {
+    transform: rotateY(180deg);
+    background-color: $colour-tiles;
+    pointer-events: none;
+  }
+
+  &.matched {
+    background-color: $colour-matched;
+    pointer-events: none;
+  }
+  .board__image {
+    width: 75%;
+    height: 75%;
+    padding: 0.75rem;
+    background-color: transparent;
+  }
 }
 
-button {
-    border: 1px solid $colour-red;
-    text-align: center;
-    padding: 8px;
-    border-radius: 12px;
-    display: inline-block;
-    background-color: $colour-white;
-    color: $colour-red;
-    margin-bottom: 10px;
+.notification {
+  position: fixed;
+  top: 7%;
+  min-width: 15rem;
+  max-width: 35rem;
+  bottom: 0;
+  left: 25%;
+  right: 0;
+  visibility: hidden;
+  background-color: transparent;
 
-    &:hover {
-        background-color: $colour-tiles;
-        color: $colour-white;
-        border: 1px solid $colour-white;
-    }
-}
-
-.popup {
-	margin: 70px auto;
-	padding: 20px;
-	background: $colour-white;
-	border-radius: 5px;
-	width: 75%;
+  &__popup {
+    margin: 4.375rem auto;
+    padding: 1.25rem;
+    background: $colour-white;
+    border-radius: 0.313rem;
+    width: 75%;
     height: 35%;
-	position: relative;
-	color: $colour-red;
-}
+    position: relative;
+    color: $colour-red;
+  }
 
+  &__close-icon-container {
+    text-align: right;
+  }
+
+  &__close-icon {
+    text-decoration: none;
+    color: $colour-red;
+    &:hover {
+      color: $colour-tiles;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 1.875rem;
+  }
+
+  &__heading {
+    font-size: 1.5rem;
+    padding-bottom: 1.25rem;
+    @media screen and (min-width: 768px) {
+      font-size: 1.7rem;
+    }
+
+    @media screen and (min-width: 1024px) {
+      font-size: 2rem;
+    }
+  }
+
+  &__message {
+    font-size: 1.2rem;
+    @media screen and (min-width: 768px) {
+      font-size: 1.5rem;
+    }
+
+    @media screen and (min-width: 1024px) {
+      font-size: 1.8rem;
+    }
+  }
+
+  &__button {
+    position: absolute;
+    bottom: 0.625rem;
+    @include button;
+  }
+}
