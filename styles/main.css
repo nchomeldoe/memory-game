@@ -52,9 +52,11 @@
 
 .notification {
   position: fixed;
-  top: 0;
+  top: 7%;
+  min-width: 15rem;
+  max-width: 35rem;
   bottom: 0;
-  left: 0;
+  left: 25%;
   right: 0;
   visibility: hidden;
   background-color: transparent;
@@ -74,6 +76,7 @@
 }
 .notification__close-icon {
   text-decoration: none;
+  color: #fe5834;
 }
 .notification__close-icon:hover {
   color: #127ca0;
@@ -87,6 +90,29 @@
 .notification__heading {
   font-size: 1.5rem;
   padding-bottom: 1.25rem;
+}
+@media screen and (min-width: 768px) {
+  .notification__heading {
+    font-size: 1.7rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .notification__heading {
+    font-size: 2rem;
+  }
+}
+.notification__message {
+  font-size: 1.2rem;
+}
+@media screen and (min-width: 768px) {
+  .notification__message {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .notification__message {
+    font-size: 1.8rem;
+  }
 }
 .notification__button {
   position: absolute;

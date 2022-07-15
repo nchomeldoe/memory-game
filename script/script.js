@@ -2,11 +2,11 @@
 
 const tiles = document.querySelectorAll(".board__tile");
 const newGame = document.querySelector(".reset__button");
-const body = document.querySelector("body");
+const body = document.querySelector(".outer-container");
 const notification = document.querySelector(".notification");
-const playAgain = document.querySelector(".play-again");
-const closePopup = document.querySelector("#close-popup");
-const message = document.querySelector(".message");
+const playAgain = document.querySelector(".notification__button");
+const closePopup = document.querySelector(".notification__close-icon");
+const message = document.querySelector(".notification__message");
 
 //set counters
 
@@ -129,9 +129,10 @@ const startGame = () => {
 // resetgame function to clear everything and start again
 
 const resetGame = async () => {
+  console.log("here");
   tiles.forEach((tile) => {
     tile.removeEventListener("click", tileFlip);
-    tile.className = "tile";
+    tile.className = "board__tile";
   });
   openTiles = [];
   goesTaken = 0;

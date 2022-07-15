@@ -32,9 +32,11 @@
 
 .notification {
   position: fixed;
-  top: 0;
+  top: 7%;
+  min-width: 15rem;
+  max-width: 35rem;
   bottom: 0;
-  left: 0;
+  left: 25%;
   right: 0;
   visibility: hidden;
   background-color: transparent;
@@ -56,6 +58,7 @@
 
   &__close-icon {
     text-decoration: none;
+    color: $colour-red;
     &:hover {
       color: $colour-tiles;
     }
@@ -71,6 +74,24 @@
   &__heading {
     font-size: 1.5rem;
     padding-bottom: 1.25rem;
+    @media screen and (min-width: 768px) {
+      font-size: 1.7rem;
+    }
+
+    @media screen and (min-width: 1024px) {
+      font-size: 2rem;
+    }
+  }
+
+  &__message {
+    font-size: 1.2rem;
+    @media screen and (min-width: 768px) {
+      font-size: 1.5rem;
+    }
+
+    @media screen and (min-width: 1024px) {
+      font-size: 1.8rem;
+    }
   }
 
   &__button {
