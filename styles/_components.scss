@@ -1,56 +1,56 @@
+@use "./variables" as *;
+
 .tile {
-    background-color: $colour-black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 1px;
-    transition: .75s;
+  background-color: $colour-black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1px;
+  transition: 0.75s;
 
-    &.open {
-        transform: rotateY(180deg);
-        background-color: $colour-tiles;
-        pointer-events: none;
-    }
+  &.open {
+    transform: rotateY(180deg);
+    background-color: $colour-tiles;
+    pointer-events: none;
+  }
 
-    &.matched {
-        background-color: $colour-matched;
-        pointer-events: none;
-    }
-
+  &.matched {
+    background-color: $colour-matched;
+    pointer-events: none;
+  }
 }
 
 .svg-image {
-      width: 75%;
-      height: 75%;
-      padding: 12px;
-      background-color: transparent;
+  width: 75%;
+  height: 75%;
+  padding: 12px;
+  background-color: transparent;
 }
 
 button {
-    border: 1px solid $colour-red;
-    text-align: center;
-    padding: 8px;
-    border-radius: 12px;
-    display: inline-block;
-    background-color: $colour-white;
-    color: $colour-red;
-    margin-bottom: 10px;
+  border: 1px solid $colour-red;
+  text-align: center;
+  padding: 8px;
+  border-radius: 12px;
+  display: inline-block;
+  background-color: $colour-white;
+  color: $colour-red;
+  margin-bottom: 10px;
 
-    &:hover {
-        background-color: $colour-tiles;
-        color: $colour-white;
-        border: 1px solid $colour-white;
-    }
+  &:hover {
+    background-color: $colour-tiles;
+    color: $colour-white;
+    border: 1px solid $colour-white;
+  }
 }
 
 .popup {
-	margin: 70px auto;
-	padding: 20px;
-	background: $colour-white;
-	border-radius: 5px;
-	width: 75%;
-    height: 35%;
-	position: relative;
-	color: $colour-red;
+  margin: 70px auto;
+  padding: 20px;
+  background: $colour-white;
+  border-radius: 5px;
+  width: 75%;
+  height: 35%;
+  position: relative;
+  color: $colour-red;
 }
-
