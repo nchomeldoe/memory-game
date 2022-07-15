@@ -6,3 +6,28 @@ $colour-white: #ffffff;
 $colour-tiles: #127ca0;
 $colour-black: #000000;
 $colour-matched: #daf7a6;
+
+@mixin button {
+  border: 0.063rem solid $colour-red;
+  text-align: center;
+  padding: 0.5rem;
+  border-radius: 0.75rem;
+  display: inline-block;
+  background-color: $colour-white;
+  color: $colour-red;
+  margin-bottom: 0.625rem;
+  font-size: 0.8rem;
+
+  &:hover {
+    background-color: $colour-tiles;
+    color: $colour-white;
+    border: 0.063rem solid $colour-white;
+  }
+  @media screen and (min-width: 768px) {
+    font-size: 1.2rem;
+  }
+
+  @media screen and (min-width: 1024px) {
+    font-size: 1.5rem;
+  }
+}

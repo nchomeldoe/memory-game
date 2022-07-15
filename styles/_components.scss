@@ -1,11 +1,15 @@
 @use "./variables" as *;
 
-.tile {
+.reset__button {
+  @include button;
+}
+
+.board__tile {
   background-color: $colour-black;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 1px;
+  margin: 0.063rem;
   transition: 0.75s;
 
   &.open {
@@ -18,39 +22,60 @@
     background-color: $colour-matched;
     pointer-events: none;
   }
-}
-
-.svg-image {
-  width: 75%;
-  height: 75%;
-  padding: 12px;
-  background-color: transparent;
-}
-
-button {
-  border: 1px solid $colour-red;
-  text-align: center;
-  padding: 8px;
-  border-radius: 12px;
-  display: inline-block;
-  background-color: $colour-white;
-  color: $colour-red;
-  margin-bottom: 10px;
-
-  &:hover {
-    background-color: $colour-tiles;
-    color: $colour-white;
-    border: 1px solid $colour-white;
+  .board__image {
+    width: 75%;
+    height: 75%;
+    padding: 0.75rem;
+    background-color: transparent;
   }
 }
 
-.popup {
-  margin: 70px auto;
-  padding: 20px;
-  background: $colour-white;
-  border-radius: 5px;
-  width: 75%;
-  height: 35%;
-  position: relative;
-  color: $colour-red;
+.notification {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  visibility: hidden;
+  background-color: transparent;
+
+  &__popup {
+    margin: 4.375rem auto;
+    padding: 1.25rem;
+    background: $colour-white;
+    border-radius: 0.313rem;
+    width: 75%;
+    height: 35%;
+    position: relative;
+    color: $colour-red;
+  }
+
+  &__close-icon-container {
+    text-align: right;
+  }
+
+  &__close-icon {
+    text-decoration: none;
+    &:hover {
+      color: $colour-tiles;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 1.875rem;
+  }
+
+  &__heading {
+    font-size: 1.5rem;
+    padding-bottom: 1.25rem;
+  }
+
+  &__button {
+    position: absolute;
+    bottom: 0.625rem;
+    @include button;
+  }
 }

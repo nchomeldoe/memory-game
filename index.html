@@ -17,61 +17,102 @@
     </header>
 
     <main class="main">
-        <div class="refresh">
-            <button class="refresh-button">New game</button>
+        <div class="reset">
+            <button class="reset__button">New game</button>
         </div>
 
-        <div class="game">
-            <div class="tile" id="tile-1">
-                <img class="svg-image" id="svg-1" src="images/1.svg">
+        <div class="board">
+            <div class="board__tile" id="tile-1">
+                <img class="board__image" id="svg-1">
             </div>
-            <div class="tile" id="tile-2">
-                <img class="svg-image" id="svg-2" src="images/1.svg">
+            <div class="board__tile" id="tile-2">
+                <img class="board__image" id="svg-2">
             </div>
-            <div class="tile" id="tile-3">
-                <img class="svg-image" id="svg-3" src="images/2.svg">
+            <div class="board__tile" id="tile-3">
+                <img class="board__image" id="svg-3">
             </div>
-            <div class="tile" id="tile-4">
-                <img class="svg-image" id="svg-4" src="images/2.svg">
+            <div class="board__tile" id="tile-4">
+                <img class="board__image" id="svg-4">
             </div>
-            <div class="tile" id="tile-5">
-                <img class="svg-image" id="svg-5" src="images/3.svg">
+            <div class="board__tile" id="tile-5">
+                <img class="board__image" id="svg-5">
             </div>
-            <div class="tile" id="tile-6">
-                <img class="svg-image" id="svg-6" src="images/3.svg">
+            <div class="board__tile" id="tile-6">
+                <img class="board__image" id="svg-6">
             </div>
-            <div class="tile" id="tile-7">
-                <img class="svg-image" id="svg-7" src="images/4.svg">
+            <div class="board__tile" id="tile-7">
+                <img class="board__image" id="svg-7">
             </div>
-            <div class="tile" id="tile-8">
-                <img class="svg-image" id="svg-8" src="images/4.svg">
+            <div class="board__tile" id="tile-8">
+                <img class="board__image" id="svg-8">
             </div>
-            <div class="tile" id="tile-9">
-                <img class="svg-image" id="svg-9" src="images/5.svg">
+            <div class="board__tile" id="tile-9">
+                <img class="board__image" id="svg-9">
             </div>
-            <div class="tile" id="tile-10">
-                <img class="svg-image" id="svg-10" src="images/5.svg">
+            <div class="board__tile" id="tile-10">
+                <img class="board__image" id="svg-10">
             </div>
-            <div class="tile" id="tile-11">
-                <img class="svg-image" id="svg-11" src="images/6.svg">
+            <div class="board__tile" id="tile-11">
+                <img class="board__image" id="svg-11">
             </div>
-            <div class="tile" id="tile-12">
-                <img class="svg-image" id="svg-12" src="images/6.svg">
+            <div class="board__tile" id="tile-12">
+                <img class="board__image" id="svg-12">
             </div>
         </div>
+
+        <!-- <div class="board">
+                    <div class="board__tile" id="tile-1">
+                        <img class="board__image" id="svg-1" src="images/1.svg">
+                    </div>
+                    <div class="board__tile" id="tile-2">
+                        <img class="board__image" id="svg-2" src="images/1.svg">
+                    </div>
+                    <div class="board__tile" id="tile-3">
+                        <img class="board__image" id="svg-3" src="images/2.svg">
+                    </div>
+                    <div class="board__tile" id="tile-4">
+                        <img class="board__image" id="svg-4" src="images/2.svg">
+                    </div>
+                    <div class="board__tile" id="tile-5">
+                        <img class="board__image" id="svg-5" src="images/3.svg">
+                    </div>
+                    <div class="board__tile" id="tile-6">
+                        <img class="board__image" id="svg-6" src="images/3.svg">
+                    </div>
+                    <div class="board__tile" id="tile-7">
+                        <img class="board__image" id="svg-7" src="images/4.svg">
+                    </div>
+                    <div class="board__tile" id="tile-8">
+                        <img class="board__image" id="svg-8" src="images/4.svg">
+                    </div>
+                    <div class="board__tile" id="tile-9">
+                        <img class="board__image" id="svg-9" src="images/5.svg">
+                    </div>
+                    <div class="board__tile" id="tile-10">
+                        <img class="board__image" id="svg-10" src="images/5.svg">
+                    </div>
+                    <div class="board__tile" id="tile-11">
+                        <img class="board__image" id="svg-11" src="images/6.svg">
+                    </div>
+                    <div class="board__tile" id="tile-12">
+                        <img class="board__image" id="svg-12" src="images/6.svg">
+                    </div>
+                </div> -->
 
         <div class="notification">
-            <div class="popup">
-                <div class="close">
-                    <a id="close-popup" href=#>x</a>
+            <div class="notification__popup">
+                <div class="notification__close-icon-container">
+                    <a class="notification__close-icon" id="close-popup" href=#>x</a>
                 </div>
-                <div class="info">
-                    <h1>Game over!</h1>
-                    <p class="message"></p>
-                    <div>
-                        <button class="play-again">Play again</button>
-                    </div>
+
+                <div class="notification__info">
+                    <h3 class="notification__heading">Game over!</h3>
+
+                    <p class="notification__message"></p>
                 </div>
+                <button class="notification__button">Play again</button>
+            </div>
+        </div>
     </main>
 
     <script src="script/script3.js"></script>
